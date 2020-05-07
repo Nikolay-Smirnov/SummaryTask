@@ -1,0 +1,434 @@
+/***************************************************************
+CSS for all JSP pages
+***************************************************************/
+@import
+	url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+body {
+	margin: 0;
+	background: #dfdfe6;
+}
+
+table {
+	
+}
+
+td {
+	border: 1px solid black;
+	padding: 2px;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+input {
+	font-family: "Muli", sans-serif;
+}
+
+.findLine li {
+	display: inline-block;
+	right: 5;
+}
+
+.text{
+	font-size: 20px;
+	font-family: "Muli", sans-serif;
+	color: black;
+}
+
+.section input {
+	justify-content: none;
+	height: 30;
+	font-family: 'Muli', sans-serif;
+	font-weight: 50;
+	font-size: 12px;
+	color: #23252a;
+	background-color: #fff;
+	border-color: #23252a;
+	border-bottom-style: none;
+	border-right: none;
+	cursor: pointer;
+	transition: all .7s ease 0s;
+}
+
+.section li {
+	display: inline-block;
+}
+
+.fButton input {
+	height: 30;
+	font-family: 'Muli', sans-serif;
+	font-weight: 100;
+	font-size: 12px;
+	color: #000;
+	background-color: #fff;
+	border-color: #23252a;
+	border-bottom-style: none;
+	border-right: none;
+	cursor: pointer;
+	transition: all .7s ease 0s;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	font-family: 'Muli', sans-serif;
+	padding: 10px 10%;
+	height: 100px;
+	background-color: #23252a;
+}
+
+.nav_buttons li {
+	display: inline-block;
+	padding: 10px 10px;
+}
+
+.nav_buttons li input:hover {
+	color: #008a9;
+}
+
+ul.nav_buttons {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+.button input {
+	height: 100;
+	font-family: "Muli", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: #fff;
+	background-color: #23252a;
+	border-color: #23252a;
+	border-bottom-style: none;
+	border-right: none;
+	cursor: pointer;
+	transition: all .7s ease 0s;
+}
+
+a .button{
+	height: 100;
+	font-family: "Muli", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: #fff;
+	background-color: #23252a;
+	border-color: #23252a;
+	border-bottom-style: none;
+	border-right: none;
+	cursor: pointer;
+	transition: all .7s ease 0s;
+}
+
+.button2 input {
+	padding: 10px 10px;
+	height: 100;
+	right: 2000;
+	font-family: "Muli", sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: #fff;
+	background-color: #23252a;
+	border-color: #23252a;
+	border-bottom-style: none;
+	border-right: none;
+	cursor: pointer;
+	transition: all .7s ease 0s;
+}
+
+.findLine input {
+	justify-content: none;
+	height: 30;
+	font-family: 'Muli', sans-serif;
+	font-weight: 50;
+	font-size: 16px;
+	color: #23252a;
+	background-color: #fff;
+	border-color: #23252a;
+	border-bottom-style: none;
+	border-right: none;
+	cursor: pointer;
+	transition: all .7s ease 0s;
+}
+
+.nav_buttons input:hover {
+	background-color: rgba(255, 160, 122, 3);
+}
+
+subheader {
+	display: flex;
+	top: 100px;
+	align-items: center;
+	font-family: 'Muli', sans-serif;
+	padding: 10px 10%;
+	height: 50px;
+	background-color: #fff;
+}
+
+label.sortToLow {
+	height: 30;
+	font-family: 'Muli', sans-serif;
+	font-weight: 50;
+	font-size: 16px;
+	color: #23252a;
+	background-color: #fff;
+	border-color: #23252a;
+	border-bottom-style: none;
+	border-right: none;
+	cursor: pointer;
+	transition: all .7s ease 0s;
+}
+
+label.sortToHigh {
+	height: 30;
+	font-family: 'Muli', sans-serif;
+	font-weight: 50;
+	font-size: 16px;
+	color: #23252a;
+	background-color: #fff;
+	border-color: #23252a;
+	border-bottom-style: none;
+	border-right: none;
+	cursor: pointer;
+	transition: all .7s ease 0s;
+}
+
+.sortToHigh label:hover {
+	background-color: rgba(255, 160, 122, 3);
+}
+
+.sortToLow label:hover {
+	background-color: rgba(255, 160, 122, 3);
+}
+
+ul.sort_buttons {
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+nav.sort_buttons {
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+.sort_buttons li input:hover {
+	color: #008a9;
+}
+
+.sort_buttons li {
+	align-items: center;
+	display: inline-block;
+	padding: 40px 40px;
+}
+
+.qualityButton li {
+	display: inline-block;
+	right: 5;
+}
+
+.sort_buttons input:hover {
+	background-color: rgba(255, 160, 122, 3);
+}
+
+ul.nav_action {
+	list-style: none;
+}
+
+ul.nav li.action_button {
+	dispaly: block;
+}
+
+.buttons_sort_price input:hover {
+	color: #ff0505;
+}
+
+ul.nav li.sort_buttons {
+	dispaly: block;
+}
+
+.acceptSortButton input {
+	height: 30;
+	font-family: 'Muli', sans-serif;
+	font-size: 16px;
+	color: #000;
+	background-color: #fff;
+	cursor: pointer;
+	transition: all .7s ease 0s;
+}
+
+.acceptSortButton input:hover {
+	color: #fff;
+}
+
+action {
+	display: flex;
+	align-items: center;
+	font-family: 'Muli', sans-serif;
+	padding: 10px 10%;
+	height: 70px;
+	background-color: #fff;
+}
+
+.action_button input {
+	height: 30;
+	font-family: 'Muli', sans-serif;
+	font-size: 16px;
+	color: #000;
+	background-color: #fff;
+	cursor: pointer;
+	transition: all .7s ease 0s;
+}
+
+.action_button input:hover {
+	background-color: rgba(255, 160, 122, 3);
+	color: #fff;
+}
+
+fieldset {
+	border: none;
+}
+/***************************************************************
+Style of the main table
+***************************************************************/
+#main-container {
+	width: 100%;
+	height: 100%;
+}
+
+/***************************************************************
+Header style (TD tag in the first top row)
+***************************************************************/
+
+/***************************************************************
+Style for the left located head menu (DIV tag at left)
+***************************************************************/
+#leftHeader {
+	background: #c9c9c9;
+	float: left;
+	margin-left: 10px;
+	padding: 2px;
+}
+
+/***************************************************************
+Style for the right located head menu (DIV tag at right)
+***************************************************************/
+#rightHeader {
+	background: #c9c9c9;
+	float: right;
+	text-align: right;
+	margin-right: 10px;
+	padding: 2px;
+}
+
+/***************************************************************
+Content styles (TD tag in the main middle row)
+***************************************************************/
+.content {
+	height: 100%;
+	background: #c9c9c9;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	text-align: left;
+	vertical-align: top;
+}
+
+/***************************************************************
+Footer style (TD tag in the last bottom row)
+***************************************************************/
+#footer {
+	text-align: center;
+	background: #c9c9c9;
+}
+
+/***************************************************************
+Style for the ERROR message
+***************************************************************/
+.error {
+	font-size: large;
+	color: rgb(204, 0, 0);
+}
+
+/***************************************************************
+Miscellaneous
+***************************************************************/
+.center {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.noborder {
+	border: 2px solid red;
+}
+
+/***************************************************************
+Login form (login.jsp)
+***************************************************************/
+#login_form>fieldset {
+	display: inline;
+}
+
+#login_form>input[type=submit] {
+	margin-top: 1px;
+}
+
+/***************************************************************
+Settings form (settings.jsp)
+***************************************************************/
+#settings_form>div>p {
+	font-size: 17px;
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+
+#settings_form>input[type=submit] {
+	margin-top: 10px;
+}
+
+/***************************************************************
+List menu table (list_menu.jsp)
+***************************************************************/
+#list_menu_table {
+	margin-top: 5px;
+}
+
+#list_menu_table thead {
+	text-align: center;
+}
+
+#list_menu_table td:last-child {
+	text-align: center;
+}
+
+/***************************************************************
+List order table (list_order.jsp)
+***************************************************************/
+#list_order_table>thead>tr {
+	text-align: center;
+}
+
+#list_order_table td+td+td {
+	text-align: center;
+}
+
+#list_order_table>tbody td+td+td+td {
+	text-align: left;
+}
+
+/***************************************************************
+Make order form (list_menu.jsp)
+***************************************************************/
+#make_order {
+	margin-top: 5px;
+}
