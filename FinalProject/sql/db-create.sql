@@ -5,35 +5,36 @@ USE carrent;
 CREATE TABLE clients (
 
 	id_client INTEGER NOT NULL auto_increment PRIMARY KEY,
-	login VARCHAR(20) NOT NULL UNIQUE,
-    index_passport VARCHAR(20) NOT NULL UNIQUE,
+	login VARCHAR(50) NOT NULL UNIQUE,
+    index_passport VARCHAR(50) NOT NULL UNIQUE,
     client_phone VARCHAR(20) NOT NULL UNIQUE,
 	name_client VARCHAR(20)  NOT NULL,
 	password_client VARCHAR(20) NOT NULL,	
 	surname VARCHAR(20) NOT NULL,
 		age VARCHAR(20) NOT NULL,
         role_client VARCHAR(20) NOT NULL,
-        status_client VARCHAR(20) NOT NULL
+        status_client VARCHAR(20) NOT NULL,
+        sex VARCHAR(10) NOT NULL
 );
-
 	
 CREATE TABLE admins (
 
 	id_admin INTEGER NOT NULL auto_increment PRIMARY KEY,
-	login_admin VARCHAR(20) NOT NULL UNIQUE,
+	login_admin VARCHAR(50) NOT NULL UNIQUE,
 	name_admin VARCHAR(20)  NOT NULL,
 	index_passport VARCHAR(20) NOT NULL UNIQUE,
     admin_phone VARCHAR(20) NOT NULL UNIQUE,
 	password_admin VARCHAR(20) NOT NULL,	
 	surname_admin VARCHAR(20) NOT NULL,
-	age_admin INT NOT NULL,
-    role_admin VARCHAR(10) NOT NULL
+	age_admin VARCHAR(20) NOT NULL,
+    role_admin VARCHAR(10) NOT NULL,
+    sex VARCHAR(10) NOT NULL
 );
 
 CREATE TABLE managers (
 
 	id_manager INTEGER NOT NULL auto_increment PRIMARY KEY,
-	login_manager VARCHAR(20) NOT NULL UNIQUE,
+	login_manager VARCHAR(50) NOT NULL UNIQUE,
 	name_manager VARCHAR(20)  NOT NULL,
 	password_manager VARCHAR(20) NOT NULL,	
     manager_phone VARCHAR(20) NOT NULL UNIQUE,
@@ -43,23 +44,24 @@ CREATE TABLE managers (
 	FOREIGN KEY (id_fk_admin)  REFERENCES  admins (id_admin)
     ON DELETE RESTRICT 
 	ON UPDATE RESTRICT,
+    age_manager VARCHAR(20) NOT NULL,
     status_manager VARCHAR(20) NOT NULL,
-    role_manager VARCHAR(10) NOT NULL
-
+    role_manager VARCHAR(10) NOT NULL,
+	sex VARCHAR(10) NOT NULL
 );
 
 CREATE TABLE cars (
 	id_car INTEGER NOT NULL auto_increment PRIMARY KEY,
-	model VARCHAR(20) NOT NULL,
-    car_brand VARCHAR(20) NOT NULL,	
+	model VARCHAR(50) NOT NULL,
+    car_brand VARCHAR(50) NOT NULL,	
 	car_level VARCHAR(20) NOT NULL,	
 	price INTEGER NOT NULL,
 	status_car varchar(20) NOT NULL,
 	id_fk_admin INTEGER NOT NULL,
     VIN varchar(40) NOT NULL,
 	FOREIGN KEY (id_fk_admin)  REFERENCES  admins (id_admin)
-    ON DELETE RESTRICT 
-	ON UPDATE RESTRICT,
+    ON DELETE NO ACTION 
+	ON UPDATE NO ACTION,
 	condition_car varchar(1000) NOT NULL
   
 );
@@ -106,7 +108,7 @@ CREATE TABLE damage (
 SET SQL_SAFE_UPDATES = 0;
 INSERT INTO functions (name_function, price) Values("Personal Driver", 100);
 INSERT INTO functions (name_function, price) Values("Without Function", 0);
-INSERT INTO admins (login_admin, name_admin, surname_admin, password_admin, age_admin, role_admin,   index_passport, admin_phone) Values("annatovm123", "Anna", "Tovmasyan", 123, 19, "admin", "AB12345", "095111222333");
+INSERT INTO admins (login_admin, name_admin, surname_admin, password_admin, age_admin, role_admin, index_passport, admin_phone, sex) Values("annatovm123", "Anna", "Tovmasyan", 123, 19, "admin", "AB12345", "095111222333", 'W');
 
 
 

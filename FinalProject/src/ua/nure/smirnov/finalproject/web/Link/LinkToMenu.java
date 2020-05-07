@@ -32,7 +32,7 @@ public class LinkToMenu extends Command{
 		DAOInterfaceCar daoCar = new DAOCar();
 		List<Cars> list = new ArrayList<Cars>();	
 		try {
-			list = daoCar.selectAllCars();
+			list = daoCar.selectAllCarsByStatus();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -27,7 +27,7 @@
 							<fmt:message key="login_jsp.label.password_login_page" />
 						</legend>
 						<input type="password" name="password" />
-					</fieldset> <br /> <input type="submit" value="Take order"> <br>
+					</fieldset> <br /> <input type="submit" value="<fmt:message key="manager_jsp.label.accept_menu_page" />"> <br>
 					<br> <a href="http://localhost:8080/FinalProject/reg.jsp"><fmt:message
 							key="login_jsp.label.registration_login_page" /></a></td>
 			</tr>

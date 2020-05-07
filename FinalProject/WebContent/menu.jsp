@@ -19,6 +19,9 @@
 			value="${carModelAndBrand}" />
 		<input type="hidden" name="command" value="Menu" />
 
+		<% if(session.isNew()) {
+			String log = "Вход";
+		}%>
 
 		<header>
 

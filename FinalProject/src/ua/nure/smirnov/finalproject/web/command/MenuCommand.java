@@ -3,6 +3,7 @@ package ua.nure.smirnov.finalproject.web.command;
 
 import java.io.IOException;
 
+
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -17,7 +18,6 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 
-import ua.nure.smirnov.finalproject.Controller.DBManager;
 import ua.nure.smirnov.finalproject.Controller.DAO.DAOInterfaceCar;
 import ua.nure.smirnov.finalproject.Controller.DAO.mySQL.DAOCar;
 import ua.nure.smirnov.finalproject.entity.Cars;
@@ -93,11 +93,11 @@ public class MenuCommand extends Command {
 			}
 
 		}
-		
+
 		if (request.getParameter("chooseLanguage") != null) {
-			return forward = Path.COMMAND_CHOOSE_LANGUAGE;	
+			return forward = Path.COMMAND_CHOOSE_LANGUAGE;
 		}
-		
+
 		if (request.getParameter("second") != null) {
 			if (role.contentEquals("role")) {
 				LOG.trace("current state --> " + session.isNew());
@@ -109,6 +109,9 @@ public class MenuCommand extends Command {
 			LocalDate dateOrder = LocalDate.parse(request.getParameter("calendar"));
 			LocalDate dateNow = LocalDate.now();
 			int date = (int) ChronoUnit.DAYS.between(dateNow, dateOrder);
+			if (date < 0) {
+				throw new AppException(Message.DATA_INCORECT);
+			}
 			request.setAttribute("date", date);
 			return forward = Path.COMMAND_MENU;
 		}

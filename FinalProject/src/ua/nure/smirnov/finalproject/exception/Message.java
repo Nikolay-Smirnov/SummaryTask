@@ -30,5 +30,6 @@ public class Message {
 	public static final String CANNOT_DELETE_CAR = "exception_jsp.Car";
 	public static final String CART_DONT_CORRECT = "exception_jsp.Cart";
 	public static final String MISTACE_DB = "exception_jsp.Mistake";
+	public static final String DATA_INCORECT = "exception_jsp.MistakeData";
 
 }

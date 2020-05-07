@@ -63,7 +63,7 @@
 						<legend>
 							<fmt:message key='admin_jsp.label.priceCar_page' />
 						</legend>
-						<input name="price" value="${car.price}" />
+						<input name="price" value="${car.price}" />&nbsp;&#8372
 					</fieldset>
 					<fieldset>
 						<legend>

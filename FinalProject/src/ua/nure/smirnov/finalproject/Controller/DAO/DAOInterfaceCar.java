@@ -12,5 +12,6 @@ public interface DAOInterfaceCar {
 	public void updateCar(Cars car) throws Exception, AppException;
 	public Cars findCarById(int id) throws Exception, AppException;
 	public void insertCar(Cars car)throws Exception, AppException;
+	List<Cars> selectAllCarsByStatus() throws Exception, AppException;
 	
 }

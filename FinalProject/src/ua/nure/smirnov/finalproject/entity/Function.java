@@ -19,4 +19,10 @@ public class Function {
 	public String getFunction() {
 		return function;
 	}
+
+	@Override
+	public String toString() {
+		return "Function [price: " + price + ", " + "function: " + function + "]";
+	}
+
 }

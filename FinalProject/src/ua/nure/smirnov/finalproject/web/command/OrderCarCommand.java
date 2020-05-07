@@ -2,6 +2,7 @@ package ua.nure.smirnov.finalproject.web.command;
 
 import java.io.IOException;
 
+
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
@@ -15,7 +16,6 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import ua.nure.smirnov.finalproject.Controller.ClientMenuController;
-import ua.nure.smirnov.finalproject.Controller.DBManager;
 import ua.nure.smirnov.finalproject.Controller.DAO.DAOInterfaceFunction;
 import ua.nure.smirnov.finalproject.Controller.DAO.DAOInterfaceOrder;
 import ua.nure.smirnov.finalproject.Controller.DAO.mySQL.DAOFunction;
@@ -41,10 +41,9 @@ public class OrderCarCommand extends Command {
 			throws IOException, ServletException, AppException {
 		HttpSession session = request.getSession();
 		DAOInterfaceFunction DAOFunction = new DAOFunction();
-		String forward = null;
 		DAOInterfaceOrder daoOrder = new DAOOrder();
 
-		forward = null;
+		String forward = null;
 		Client client = (Client) session.getAttribute("client");
 		String index = client.getPassport();
 		List<Orders> list = new ArrayList<Orders>();
@@ -77,6 +76,9 @@ public class OrderCarCommand extends Command {
 		LocalDate dateStart = LocalDate.now();
 		LocalDate dateFinish = LocalDate.parse(request.getParameter("calendar"));
 		int date = (int) ChronoUnit.DAYS.between(dateStart, dateFinish);
+		if (date <= 0) {
+			throw new AppException(Message.DATA_INCORECT);
+		}
 		String function = request.getParameter("function");
 		Cars car = (Cars) session.getAttribute("car");
 		int idCar = car.getIdCars();

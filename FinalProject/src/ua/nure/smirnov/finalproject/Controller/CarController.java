@@ -60,7 +60,7 @@ public class CarController {
 		List<Cars> list = getCarList();
 		if (list == null) {
 			try {
-				list = daoCar.selectAllCars();
+				list = daoCar.selectAllCarsByStatus();
 			} catch (AppException e) {
 				e.printStackTrace();
 			}
