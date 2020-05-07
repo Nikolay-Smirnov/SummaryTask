@@ -1,3 +1,5 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isErrorPage="true" %>
 <%@ page import="java.io.PrintWriter" %>
 <%@ include file="/WEB-INF/jspf/directive/page.jspf" %>
@@ -19,7 +21,7 @@
 			<%-- CONTENT --%>
 				
 				<h2 class="error">
-					The following error occurred
+					Oops, something went wrong
 				</h2>
 			
 				<%-- this way we obtain an information about an exception (if it has been occurred) --%>
@@ -32,7 +34,7 @@
 				</c:if>			
 				
 				<c:if test="${not empty message}">
-					<h3>${message}</h3>
+					<h3><fmt:message key='${message}'/></h3>
 				</c:if>
 				
 				<c:if test="${not empty exception}">
@@ -41,7 +43,7 @@
 				
 				<%-- if we get this page using forward --%>
 				<c:if test="${not empty requestScope.errorMessage}">
-					<h3>${requestScope.errorMessage}</h3>
+					<h3><fmt:message key='${requestScope.errorMessage}'/></h3>
 				</c:if>
 
 			<%-- CONTENT --%>

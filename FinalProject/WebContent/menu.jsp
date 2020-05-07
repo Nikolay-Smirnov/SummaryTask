@@ -48,13 +48,10 @@
 				</ul>
 			</nav>
 		</header>
-
-
-
 		<subheader>
 		<nav>
 			<ul class="sort_buttons">
-				<li class="qualityButton">
+				<li>
 					<fieldset>
 						<legend>
 							<fmt:message key='menu_jsp.label.levelQ_menu_page' />
@@ -93,14 +90,15 @@
 
 		</nav>
 		</subheader>
+		
 		<subheader>
 		<nav>
-			<ul class="sort_buttons">
+			<ul class="sort_buttonsTwo">
 				<fmt:message key='menu_jsp.label.date_menu_page' />
 				:
 				<input type="date" name="calendar">
 
-				<li class="acceptSortButton"><input type="submit" name="second"
+				<li class="acceptSortButtonTwo"><input type="submit" name="second"
 					value="<fmt:message
 							key='menu_jsp.label.take_order_menu_page'/>"></li>
 

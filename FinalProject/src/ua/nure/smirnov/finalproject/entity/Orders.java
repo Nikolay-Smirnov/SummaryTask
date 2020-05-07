@@ -14,7 +14,7 @@ public class Orders {
 	private int idCar;
 	private String status;
 	private String descripton;
-	
+
 	public String getDescripton() {
 		return descripton;
 	}
@@ -103,5 +103,13 @@ public class Orders {
 
 	public String getIndexManager() {
 		return indexManager;
+	}
+
+	@Override
+	public String toString() {
+		return "Clients [IdOrder: " + idOrders + ", " + "Data finish: " + dateFinish + ", " + "Data start: " + dateStart
+				+ "," + "Price: " + price + "," + "Add function: " + addFunction + "," + "Activity order: "
+				+ orderActivity + "," + "Index client : " + indexClient + "Index manager : " + indexManager + ","
+				+ "Description : " + descripton + "Id car: " + idCar + "," + "Status order: " + status + "]";
 	}
 }

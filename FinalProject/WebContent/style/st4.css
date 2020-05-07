@@ -170,6 +170,16 @@ subheader {
 	background-color: #fff;
 }
 
+subheaderTwo {
+	display: flex;
+	top: 100px;
+	align-items: center;
+	font-family: 'Muli', sans-serif;
+	padding: 10px 10%;
+	height: 55px;
+	background-color: #fff;
+}
+
 label.sortToLow {
 	height: 30;
 	font-family: 'Muli', sans-serif;
@@ -214,6 +224,15 @@ ul.sort_buttons {
 	display: block;
 }
 
+ul.sort_buttonsTwo {
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+	
+}
+
 nav.sort_buttons {
 	align-items: center;
 	list-style: none;
@@ -222,7 +241,23 @@ nav.sort_buttons {
 	display: block;
 }
 
+nav.sort_buttonsTwo {
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
 .sort_buttons li input:hover {
+	color: #008a9;
+}
+
+.sort_buttonsTwo li input:hover {
+	color: #008a9;
+}
+
+.sort_buttonsTwo li input:hover {
 	color: #008a9;
 }
 
@@ -238,6 +273,10 @@ nav.sort_buttons {
 }
 
 .sort_buttons input:hover {
+	background-color: rgba(255, 160, 122, 3);
+}
+
+.sort_buttonsTwo input:hover {
 	background-color: rgba(255, 160, 122, 3);
 }
 
@@ -268,6 +307,20 @@ ul.nav li.sort_buttons {
 }
 
 .acceptSortButton input:hover {
+	color: #fff;
+}
+
+.acceptSortButtonTwo input {
+	height: 30;
+	font-family: 'Muli', sans-serif;
+	font-size: 16px;
+	color: #000;
+	background-color: #fff;
+	cursor: pointer;
+	transition: all .7s ease 0s;
+}
+
+.acceptSortButtonTwo input:hover {
 	color: #fff;
 }
 
